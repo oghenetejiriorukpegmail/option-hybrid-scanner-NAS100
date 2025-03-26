@@ -1,2 +1,1 @@
-# Options-Technical Hybrid Scanner
-# Main package initialization
+# This file makes the 'src' directory a package

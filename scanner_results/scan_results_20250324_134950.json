@@ -1,0 +1,2908 @@
+[
+  {
+    "symbol": "MRVL",
+    "timestamp": "2025-03-24T13:49:32.271339",
+    "setup": "neutral_setup",
+    "confidence": 93.89523939735551,
+    "reasons": [
+      "Reason 70",
+      "Reason 71"
+    ],
+    "entry_signal": true,
+    "entry_strength": 71.60053177423902,
+    "entry_reasons": [
+      "Entry reason 70"
+    ],
+    "exit_signal": false,
+    "exit_strength": 44.80488039416136,
+    "exit_reasons": [
+      "Exit reason 70"
+    ],
+    "position_size": 0.04741125020524767,
+    "stop_loss": 94.38774611451215,
+    "risk_reward": 2.306003572487139,
+    "target_price": 114.26959082269649,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "weak",
+      "pcr": 0.7914361635379851,
+      "rsi": 67.53262212795285,
+      "stoch_rsi": 46.23831141109433
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.28566860363452
+      ]
+    }
+  },
+  {
+    "symbol": "NFLX",
+    "timestamp": "2025-03-24T13:49:34.280899",
+    "setup": "bullish_setup",
+    "confidence": 93.41045480536658,
+    "reasons": [
+      "Reason 74",
+      "Reason 75"
+    ],
+    "entry_signal": true,
+    "entry_strength": 87.51965248393998,
+    "entry_reasons": [
+      "Entry reason 74"
+    ],
+    "exit_signal": true,
+    "exit_strength": 44.049640970883004,
+    "exit_reasons": [
+      "Exit reason 74"
+    ],
+    "position_size": 0.031061087429994465,
+    "stop_loss": 91.8367176677212,
+    "risk_reward": 1.6421354545727103,
+    "target_price": 109.86068080477649,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.4682497956468095,
+      "rsi": 32.67174290187727,
+      "stoch_rsi": 49.08263238438963
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        101.16492399351043
+      ]
+    }
+  },
+  {
+    "symbol": "VRTX",
+    "timestamp": "2025-03-24T13:49:47.839067",
+    "setup": "bullish_setup",
+    "confidence": 93.28058853603534,
+    "reasons": [
+      "Reason 101",
+      "Reason 102"
+    ],
+    "entry_signal": true,
+    "entry_strength": 67.98664138140647,
+    "entry_reasons": [
+      "Entry reason 101"
+    ],
+    "exit_signal": false,
+    "exit_strength": 54.87463413354997,
+    "exit_reasons": [
+      "Exit reason 101"
+    ],
+    "position_size": 0.020885494442022243,
+    "stop_loss": 94.67272887133744,
+    "risk_reward": 2.074027355388795,
+    "target_price": 118.36958345958983,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "weak",
+      "pcr": 0.6029968597622043,
+      "rsi": 39.9000599520178,
+      "stoch_rsi": 20.565375467423078
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "TMUS",
+    "timestamp": "2025-03-24T13:49:44.825415",
+    "setup": "neutral_setup",
+    "confidence": 93.12770082015923,
+    "reasons": [
+      "Reason 95",
+      "Reason 96"
+    ],
+    "entry_signal": true,
+    "entry_strength": 65.75982021212226,
+    "entry_reasons": [
+      "Entry reason 95"
+    ],
+    "exit_signal": false,
+    "exit_strength": 77.84272811632236,
+    "exit_reasons": [
+      "Exit reason 95"
+    ],
+    "position_size": 0.015871083138891615,
+    "stop_loss": 94.61416516632109,
+    "risk_reward": 2.9579640151762328,
+    "target_price": 108.52434030538693,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 0.6045626682329254,
+      "rsi": 67.99328615552787,
+      "stoch_rsi": 23.12465351667297
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.49551641974936,
+        100.50942282828765
+      ]
+    }
+  },
+  {
+    "symbol": "AEP",
+    "timestamp": "2025-03-24T13:49:00.628081",
+    "setup": "neutral_setup",
+    "confidence": 92.95105729976314,
+    "reasons": [
+      "Reason 7",
+      "Reason 8"
+    ],
+    "entry_signal": false,
+    "entry_strength": 80.82741149628112,
+    "entry_reasons": [
+      "Entry reason 7"
+    ],
+    "exit_signal": true,
+    "exit_strength": 51.51717125875459,
+    "exit_reasons": [
+      "Exit reason 7"
+    ],
+    "position_size": 0.034628812339454175,
+    "stop_loss": 90.79537675533308,
+    "risk_reward": 2.890220031717048,
+    "target_price": 116.41514491131719,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "weak",
+      "pcr": 0.7133398083194016,
+      "rsi": 41.52348129102473,
+      "stoch_rsi": 35.23874607900899
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "timestamp": "2025-03-24T13:48:57.614451",
+    "setup": "bullish_setup",
+    "confidence": 91.94057254110447,
+    "reasons": [
+      "Reason 1",
+      "Reason 2"
+    ],
+    "entry_signal": false,
+    "entry_strength": 64.99732889485297,
+    "entry_reasons": [
+      "Entry reason 1"
+    ],
+    "exit_signal": false,
+    "exit_strength": 56.09457834455784,
+    "exit_reasons": [
+      "Exit reason 1"
+    ],
+    "position_size": 0.044679038522151736,
+    "stop_loss": 93.33283669211161,
+    "risk_reward": 2.76850262296818,
+    "target_price": 108.70639144571972,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "weak",
+      "pcr": 0.7752654409165946,
+      "rsi": 54.33883419809793,
+      "stoch_rsi": 23.9475297831408
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        97.54850325479694,
+        95.63797790311159
+      ]
+    }
+  },
+  {
+    "symbol": "CSCO",
+    "timestamp": "2025-03-24T13:49:13.177944",
+    "setup": "bullish_setup",
+    "confidence": 91.52636761442838,
+    "reasons": [
+      "Reason 32",
+      "Reason 33"
+    ],
+    "entry_signal": true,
+    "entry_strength": 54.16615415415869,
+    "entry_reasons": [
+      "Entry reason 32"
+    ],
+    "exit_signal": false,
+    "exit_strength": 77.12512806428751,
+    "exit_reasons": [
+      "Exit reason 32"
+    ],
+    "position_size": 0.023298110516991967,
+    "stop_loss": 94.29686103528933,
+    "risk_reward": 2.858915581438517,
+    "target_price": 106.46095306051342,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 0.7347226231962071,
+      "rsi": 61.1760673669162,
+      "stoch_rsi": 24.738479616750393
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.47916112785875,
+        100.57517244804852
+      ]
+    }
+  },
+  {
+    "symbol": "WBD",
+    "timestamp": "2025-03-24T13:49:48.341344",
+    "setup": "bullish_setup",
+    "confidence": 91.521764074091,
+    "reasons": [
+      "Reason 102",
+      "Reason 103"
+    ],
+    "entry_signal": true,
+    "entry_strength": 74.48229100608751,
+    "entry_reasons": [
+      "Entry reason 102"
+    ],
+    "exit_signal": true,
+    "exit_strength": 50.95554723036465,
+    "exit_reasons": [
+      "Exit reason 102"
+    ],
+    "position_size": 0.034471295716666676,
+    "stop_loss": 91.30519937341751,
+    "risk_reward": 2.80926292793119,
+    "target_price": 109.56067705724222,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.02760670425826,
+      "rsi": 67.77265804136444,
+      "stoch_rsi": 24.79434887778266
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "CMCSA",
+    "timestamp": "2025-03-24T13:49:11.169583",
+    "setup": "bullish_setup",
+    "confidence": 90.72061403289919,
+    "reasons": [
+      "Reason 28",
+      "Reason 29"
+    ],
+    "entry_signal": false,
+    "entry_strength": 64.04766631890462,
+    "entry_reasons": [
+      "Entry reason 28"
+    ],
+    "exit_signal": false,
+    "exit_strength": 51.66058022832852,
+    "exit_reasons": [
+      "Exit reason 28"
+    ],
+    "position_size": 0.03317445968780907,
+    "stop_loss": 91.37857211024196,
+    "risk_reward": 2.383939353997646,
+    "target_price": 118.79035245626108,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "weak",
+      "pcr": 1.3163104040331133,
+      "rsi": 30.38113281720821,
+      "stoch_rsi": 47.53747104415858
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.06701175210414,
+        99.97779764704478
+      ]
+    }
+  },
+  {
+    "symbol": "XEL",
+    "timestamp": "2025-03-24T13:49:49.344688",
+    "setup": "neutral_setup",
+    "confidence": 90.69401355172874,
+    "reasons": [
+      "Reason 104",
+      "Reason 105"
+    ],
+    "entry_signal": false,
+    "entry_strength": 82.79929686110052,
+    "entry_reasons": [
+      "Entry reason 104"
+    ],
+    "exit_signal": false,
+    "exit_strength": 41.44910334756177,
+    "exit_reasons": [
+      "Exit reason 104"
+    ],
+    "position_size": 0.02767040959172331,
+    "stop_loss": 91.71064529950753,
+    "risk_reward": 2.0176224737877044,
+    "target_price": 108.36009515463945,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 0.8516654060599699,
+      "rsi": 53.09857480788389,
+      "stoch_rsi": 59.93545652641576
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.56875958548851
+      ]
+    }
+  },
+  {
+    "symbol": "ATVI",
+    "timestamp": "2025-03-24T13:49:05.146508",
+    "setup": "bearish_setup",
+    "confidence": 90.47809721607211,
+    "reasons": [
+      "Reason 16",
+      "Reason 17"
+    ],
+    "entry_signal": true,
+    "entry_strength": 73.31735573299966,
+    "entry_reasons": [
+      "Entry reason 16"
+    ],
+    "exit_signal": true,
+    "exit_strength": 59.15945905979625,
+    "exit_reasons": [
+      "Exit reason 16"
+    ],
+    "position_size": 0.019546717972686176,
+    "stop_loss": 93.54983815515365,
+    "risk_reward": 2.6899130393049946,
+    "target_price": 106.2122172054414,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "strong",
+      "pcr": 1.346034323588797,
+      "rsi": 50.75463595743334,
+      "stoch_rsi": 57.26285447231113
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "MELI",
+    "timestamp": "2025-03-24T13:49:30.259497",
+    "setup": "bullish_setup",
+    "confidence": 89.45898343965537,
+    "reasons": [
+      "Reason 66",
+      "Reason 67"
+    ],
+    "entry_signal": true,
+    "entry_strength": 53.41474018593483,
+    "entry_reasons": [
+      "Entry reason 66"
+    ],
+    "exit_signal": false,
+    "exit_strength": 49.12073379614929,
+    "exit_reasons": [
+      "Exit reason 66"
+    ],
+    "position_size": 0.012027355139400236,
+    "stop_loss": 90.72201153645173,
+    "risk_reward": 1.719606198040679,
+    "target_price": 115.8210900777833,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 1.1893321051513963,
+      "rsi": 37.12238987531633,
+      "stoch_rsi": 57.57424319917489
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.09033099461622,
+        99.9168838802245
+      ]
+    }
+  },
+  {
+    "symbol": "GFS",
+    "timestamp": "2025-03-24T13:49:20.213047",
+    "setup": "bearish_setup",
+    "confidence": 88.02479965500117,
+    "reasons": [
+      "Reason 46",
+      "Reason 47"
+    ],
+    "entry_signal": false,
+    "entry_strength": 62.03968266588677,
+    "entry_reasons": [
+      "Entry reason 46"
+    ],
+    "exit_signal": false,
+    "exit_strength": 55.43833579353168,
+    "exit_reasons": [
+      "Exit reason 46"
+    ],
+    "position_size": 0.04336531721003765,
+    "stop_loss": 92.04648738218431,
+    "risk_reward": 1.6349528131481998,
+    "target_price": 119.69936643774678,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 0.6450652796578892,
+      "rsi": 30.371283127347063,
+      "stoch_rsi": 35.376597574155326
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        104.26201128933491,
+        97.42487870467632,
+        96.26950403081956
+      ]
+    }
+  },
+  {
+    "symbol": "ODFL",
+    "timestamp": "2025-03-24T13:49:35.787944",
+    "setup": "bullish_setup",
+    "confidence": 87.49728728914522,
+    "reasons": [
+      "Reason 77",
+      "Reason 78"
+    ],
+    "entry_signal": true,
+    "entry_strength": 65.07123682967037,
+    "entry_reasons": [
+      "Entry reason 77"
+    ],
+    "exit_signal": true,
+    "exit_strength": 65.40467700990021,
+    "exit_reasons": [
+      "Exit reason 77"
+    ],
+    "position_size": 0.047601474643900785,
+    "stop_loss": 91.84342884296154,
+    "risk_reward": 1.6811719360356898,
+    "target_price": 107.03137718913074,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 1.1002338069079407,
+      "rsi": 34.60151924312989,
+      "stoch_rsi": 77.25598861264731
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.27185310736364
+      ]
+    }
+  },
+  {
+    "symbol": "INTC",
+    "timestamp": "2025-03-24T13:49:23.230204",
+    "setup": "bullish_setup",
+    "confidence": 87.35975629906676,
+    "reasons": [
+      "Reason 52",
+      "Reason 53"
+    ],
+    "entry_signal": true,
+    "entry_strength": 84.49697736014011,
+    "entry_reasons": [
+      "Entry reason 52"
+    ],
+    "exit_signal": true,
+    "exit_strength": 74.6666797255769,
+    "exit_reasons": [
+      "Exit reason 52"
+    ],
+    "position_size": 0.019916124076863245,
+    "stop_loss": 93.87623640509534,
+    "risk_reward": 1.7884089853452645,
+    "target_price": 105.50022280282,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.9786588555303143,
+      "rsi": 57.02691919569905,
+      "stoch_rsi": 60.29057150744001
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.92908832734173
+      ]
+    }
+  },
+  {
+    "symbol": "MRNA",
+    "timestamp": "2025-03-24T13:49:31.769373",
+    "setup": "neutral_setup",
+    "confidence": 87.1119348594694,
+    "reasons": [
+      "Reason 69",
+      "Reason 70"
+    ],
+    "entry_signal": false,
+    "entry_strength": 53.16389890260625,
+    "entry_reasons": [
+      "Entry reason 69"
+    ],
+    "exit_signal": false,
+    "exit_strength": 46.59667931224179,
+    "exit_reasons": [
+      "Exit reason 69"
+    ],
+    "position_size": 0.016321688192762918,
+    "stop_loss": 91.17127709616766,
+    "risk_reward": 1.626221945445139,
+    "target_price": 108.57734829995644,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.4137923419462701,
+      "rsi": 36.02324329075965,
+      "stoch_rsi": 49.42541785514526
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.35898672405898,
+        103.87233600611178
+      ]
+    }
+  },
+  {
+    "symbol": "PDD",
+    "timestamp": "2025-03-24T13:49:38.800278",
+    "setup": "bullish_setup",
+    "confidence": 86.57829935087196,
+    "reasons": [
+      "Reason 83",
+      "Reason 84"
+    ],
+    "entry_signal": true,
+    "entry_strength": 85.44724002828988,
+    "entry_reasons": [
+      "Entry reason 83"
+    ],
+    "exit_signal": false,
+    "exit_strength": 75.82044315557667,
+    "exit_reasons": [
+      "Exit reason 83"
+    ],
+    "position_size": 0.028410465573736804,
+    "stop_loss": 93.37732959771529,
+    "risk_reward": 2.757697023428308,
+    "target_price": 116.34036695828574,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 0.878689906164952,
+      "rsi": 47.83104460820253,
+      "stoch_rsi": 78.96480646711646
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.86266122566181,
+        97.86081958613032,
+        97.37685093398437
+      ]
+    }
+  },
+  {
+    "symbol": "MCHP",
+    "timestamp": "2025-03-24T13:49:28.753757",
+    "setup": "bearish_setup",
+    "confidence": 86.0003021135543,
+    "reasons": [
+      "Reason 63",
+      "Reason 64"
+    ],
+    "entry_signal": true,
+    "entry_strength": 54.94381691591292,
+    "entry_reasons": [
+      "Entry reason 63"
+    ],
+    "exit_signal": false,
+    "exit_strength": 71.4390182408257,
+    "exit_reasons": [
+      "Exit reason 63"
+    ],
+    "position_size": 0.04460138503699904,
+    "stop_loss": 92.25576935525429,
+    "risk_reward": 2.5573060203853046,
+    "target_price": 106.15313286597004,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 1.0606044760516795,
+      "rsi": 54.58326722191573,
+      "stoch_rsi": 33.48153074448129
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.79977316522266
+      ]
+    }
+  },
+  {
+    "symbol": "CPRT",
+    "timestamp": "2025-03-24T13:49:12.173370",
+    "setup": "bullish_setup",
+    "confidence": 85.94921164928977,
+    "reasons": [
+      "Reason 30",
+      "Reason 31"
+    ],
+    "entry_signal": true,
+    "entry_strength": 74.27451409175957,
+    "entry_reasons": [
+      "Entry reason 30"
+    ],
+    "exit_signal": false,
+    "exit_strength": 75.35678097611805,
+    "exit_reasons": [
+      "Exit reason 30"
+    ],
+    "position_size": 0.01930106067325258,
+    "stop_loss": 94.42461367687261,
+    "risk_reward": 2.769116211641884,
+    "target_price": 107.53414711256724,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "weak",
+      "pcr": 0.9006082154065692,
+      "rsi": 67.34473027451052,
+      "stoch_rsi": 64.68159455092079
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        101.09314157498991,
+        98.38648540198102
+      ]
+    }
+  },
+  {
+    "symbol": "TTWO",
+    "timestamp": "2025-03-24T13:49:46.332286",
+    "setup": "neutral_setup",
+    "confidence": 84.60631155350592,
+    "reasons": [
+      "Reason 98",
+      "Reason 99"
+    ],
+    "entry_signal": true,
+    "entry_strength": 74.65510912014257,
+    "entry_reasons": [
+      "Entry reason 98"
+    ],
+    "exit_signal": true,
+    "exit_strength": 72.83755804717785,
+    "exit_reasons": [
+      "Exit reason 98"
+    ],
+    "position_size": 0.04380258252357046,
+    "stop_loss": 92.44441625092975,
+    "risk_reward": 1.5861635719253893,
+    "target_price": 108.10264368567786,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "negative",
+      "momentum": "strong",
+      "pcr": 0.7571561223564215,
+      "rsi": 32.46709991562081,
+      "stoch_rsi": 42.49981486728858
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.08522504271137
+      ]
+    }
+  },
+  {
+    "symbol": "ZS",
+    "timestamp": "2025-03-24T13:49:50.347715",
+    "setup": "bullish_setup",
+    "confidence": 84.30899412916875,
+    "reasons": [
+      "Reason 106",
+      "Reason 107"
+    ],
+    "entry_signal": true,
+    "entry_strength": 59.02220512931111,
+    "entry_reasons": [
+      "Entry reason 106"
+    ],
+    "exit_signal": false,
+    "exit_strength": 60.34101741495705,
+    "exit_reasons": [
+      "Exit reason 106"
+    ],
+    "position_size": 0.025082404510219154,
+    "stop_loss": 90.99340644386,
+    "risk_reward": 2.1079877118162687,
+    "target_price": 106.89619727367685,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 0.9445729332163467,
+      "rsi": 66.36450540998689,
+      "stoch_rsi": 66.9473214219858
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        95.38036262736023,
+        100.41730875246495
+      ]
+    }
+  },
+  {
+    "symbol": "EA",
+    "timestamp": "2025-03-24T13:49:17.196705",
+    "setup": "bullish_setup",
+    "confidence": 83.43442730118389,
+    "reasons": [
+      "Reason 40",
+      "Reason 41"
+    ],
+    "entry_signal": true,
+    "entry_strength": 64.49637229956252,
+    "entry_reasons": [
+      "Entry reason 40"
+    ],
+    "exit_signal": false,
+    "exit_strength": 79.89592679326496,
+    "exit_reasons": [
+      "Exit reason 40"
+    ],
+    "position_size": 0.03265798655238938,
+    "stop_loss": 93.28325317404538,
+    "risk_reward": 2.5638248785027793,
+    "target_price": 113.42987519596352,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.7420509950592441,
+      "rsi": 34.16014345380577,
+      "stoch_rsi": 66.96617795490826
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "PYPL",
+    "timestamp": "2025-03-24T13:49:40.307171",
+    "setup": "bearish_setup",
+    "confidence": 82.72161560302752,
+    "reasons": [
+      "Reason 86",
+      "Reason 87"
+    ],
+    "entry_signal": true,
+    "entry_strength": 56.95283808013416,
+    "entry_reasons": [
+      "Entry reason 86"
+    ],
+    "exit_signal": true,
+    "exit_strength": 74.26383892094597,
+    "exit_reasons": [
+      "Exit reason 86"
+    ],
+    "position_size": 0.02354409506787141,
+    "stop_loss": 92.0477603417692,
+    "risk_reward": 1.6998187822526716,
+    "target_price": 105.8181695745932,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 1.2480068570481524,
+      "rsi": 44.61389842793899,
+      "stoch_rsi": 25.41149665480875
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.76094620603732
+      ]
+    }
+  },
+  {
+    "symbol": "ADBE",
+    "timestamp": "2025-03-24T13:48:58.618834",
+    "setup": "bearish_setup",
+    "confidence": 82.67944672732452,
+    "reasons": [
+      "Reason 3",
+      "Reason 4"
+    ],
+    "entry_signal": true,
+    "entry_strength": 81.03927409285953,
+    "entry_reasons": [
+      "Entry reason 3"
+    ],
+    "exit_signal": false,
+    "exit_strength": 77.17225463214774,
+    "exit_reasons": [
+      "Exit reason 3"
+    ],
+    "position_size": 0.03947910748024813,
+    "stop_loss": 90.97593634768506,
+    "risk_reward": 1.5549255762541874,
+    "target_price": 109.59926568214094,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 0.8824395963449785,
+      "rsi": 35.33068797263433,
+      "stoch_rsi": 72.45165307413156
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.7190472198019,
+        98.50242511430756,
+        95.12232075301074
+      ]
+    }
+  },
+  {
+    "symbol": "SIRI",
+    "timestamp": "2025-03-24T13:49:43.319328",
+    "setup": "bearish_setup",
+    "confidence": 81.43423967188694,
+    "reasons": [
+      "Reason 92",
+      "Reason 93"
+    ],
+    "entry_signal": false,
+    "entry_strength": 82.97630149651891,
+    "entry_reasons": [
+      "Entry reason 92"
+    ],
+    "exit_signal": false,
+    "exit_strength": 41.80664653084436,
+    "exit_reasons": [
+      "Exit reason 92"
+    ],
+    "position_size": 0.02749818624015799,
+    "stop_loss": 94.40832849734795,
+    "risk_reward": 2.523752210662633,
+    "target_price": 112.07504068264815,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.4413304545140169,
+      "rsi": 53.039669271950636,
+      "stoch_rsi": 66.97053650215796
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        97.96322026029938,
+        101.26478496367135,
+        97.50820803133112
+      ]
+    }
+  },
+  {
+    "symbol": "MNST",
+    "timestamp": "2025-03-24T13:49:31.266353",
+    "setup": "bearish_setup",
+    "confidence": 80.65850450877761,
+    "reasons": [
+      "Reason 68",
+      "Reason 69"
+    ],
+    "entry_signal": false,
+    "entry_strength": 85.01976357163454,
+    "entry_reasons": [
+      "Entry reason 68"
+    ],
+    "exit_signal": false,
+    "exit_strength": 60.14387953850155,
+    "exit_reasons": [
+      "Exit reason 68"
+    ],
+    "position_size": 0.04074097990908841,
+    "stop_loss": 92.1911280918409,
+    "risk_reward": 1.6954541210394176,
+    "target_price": 107.04644681666781,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 0.9062691263929212,
+      "rsi": 55.77778261540773,
+      "stoch_rsi": 74.50861087963646
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.07458737497504
+      ]
+    }
+  },
+  {
+    "symbol": "AMZN",
+    "timestamp": "2025-03-24T13:49:02.637178",
+    "setup": "bullish_setup",
+    "confidence": 80.60321594305705,
+    "reasons": [
+      "Reason 11",
+      "Reason 12"
+    ],
+    "entry_signal": true,
+    "entry_strength": 60.433694421935115,
+    "entry_reasons": [
+      "Entry reason 11"
+    ],
+    "exit_signal": true,
+    "exit_strength": 65.86344555288213,
+    "exit_reasons": [
+      "Exit reason 11"
+    ],
+    "position_size": 0.03025436377031967,
+    "stop_loss": 91.07924277156665,
+    "risk_reward": 2.5608204195752036,
+    "target_price": 113.78909114226606,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.5403105396685376,
+      "rsi": 42.66834278381657,
+      "stoch_rsi": 55.57350660568788
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "NXPI",
+    "timestamp": "2025-03-24T13:49:35.285452",
+    "setup": "bearish_setup",
+    "confidence": 80.32327459768561,
+    "reasons": [
+      "Reason 76",
+      "Reason 77"
+    ],
+    "entry_signal": true,
+    "entry_strength": 60.159062608249926,
+    "entry_reasons": [
+      "Entry reason 76"
+    ],
+    "exit_signal": false,
+    "exit_strength": 69.43273414373877,
+    "exit_reasons": [
+      "Exit reason 76"
+    ],
+    "position_size": 0.01661347538060612,
+    "stop_loss": 91.71800641202138,
+    "risk_reward": 2.801869201717985,
+    "target_price": 109.48863411547762,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 0.8207795806833845,
+      "rsi": 34.958440984850554,
+      "stoch_rsi": 32.2472391728857
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        104.12627939785355
+      ]
+    }
+  },
+  {
+    "symbol": "MSFT",
+    "timestamp": "2025-03-24T13:49:32.774309",
+    "setup": "bearish_setup",
+    "confidence": 80.17107130013996,
+    "reasons": [
+      "Reason 71",
+      "Reason 72"
+    ],
+    "entry_signal": true,
+    "entry_strength": 77.88015478585706,
+    "entry_reasons": [
+      "Entry reason 71"
+    ],
+    "exit_signal": true,
+    "exit_strength": 44.86536812582295,
+    "exit_reasons": [
+      "Exit reason 71"
+    ],
+    "position_size": 0.022522157638957714,
+    "stop_loss": 92.80932295775422,
+    "risk_reward": 1.774902830567814,
+    "target_price": 113.63895720889039,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 1.4506215037432826,
+      "rsi": 47.83466469106506,
+      "stoch_rsi": 26.0875258434165
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "AMD",
+    "timestamp": "2025-03-24T13:49:01.631255",
+    "setup": "neutral_setup",
+    "confidence": 77.04380893901384,
+    "reasons": [
+      "Reason 9",
+      "Reason 10"
+    ],
+    "entry_signal": true,
+    "entry_strength": 58.040721179844105,
+    "entry_reasons": [
+      "Entry reason 9"
+    ],
+    "exit_signal": false,
+    "exit_strength": 69.17863397078392,
+    "exit_reasons": [
+      "Exit reason 9"
+    ],
+    "position_size": 0.02498459049701134,
+    "stop_loss": 92.32709476524975,
+    "risk_reward": 2.06978042039108,
+    "target_price": 111.01688976126458,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 0.8883080070096852,
+      "rsi": 45.00307856253233,
+      "stoch_rsi": 67.36036526061426
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        95.94169503569904,
+        98.75975873858548,
+        96.51175624774704
+      ]
+    }
+  },
+  {
+    "symbol": "CTSH",
+    "timestamp": "2025-03-24T13:49:15.187311",
+    "setup": "bearish_setup",
+    "confidence": 76.92251048221814,
+    "reasons": [
+      "Reason 36",
+      "Reason 37"
+    ],
+    "entry_signal": true,
+    "entry_strength": 50.815821370090354,
+    "entry_reasons": [
+      "Entry reason 36"
+    ],
+    "exit_signal": true,
+    "exit_strength": 63.529669830218076,
+    "exit_reasons": [
+      "Exit reason 36"
+    ],
+    "position_size": 0.02796456134776576,
+    "stop_loss": 93.76589224943216,
+    "risk_reward": 1.5089722745548715,
+    "target_price": 111.16896464231802,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.575734807449251,
+      "rsi": 51.83801344266503,
+      "stoch_rsi": 31.537794546909215
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.98656715883133
+      ]
+    }
+  },
+  {
+    "symbol": "PAYX",
+    "timestamp": "2025-03-24T13:49:37.794979",
+    "setup": "neutral_setup",
+    "confidence": 76.05286281519592,
+    "reasons": [
+      "Reason 81",
+      "Reason 82"
+    ],
+    "entry_signal": false,
+    "entry_strength": 77.0675910422051,
+    "entry_reasons": [
+      "Entry reason 81"
+    ],
+    "exit_signal": false,
+    "exit_strength": 74.87309441643973,
+    "exit_reasons": [
+      "Exit reason 81"
+    ],
+    "position_size": 0.02179233041264515,
+    "stop_loss": 90.53137951028366,
+    "risk_reward": 2.8202427810072535,
+    "target_price": 106.57088279602723,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 0.5946714914357307,
+      "rsi": 35.74143685481892,
+      "stoch_rsi": 53.58376103257465
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "PEP",
+    "timestamp": "2025-03-24T13:49:39.302946",
+    "setup": "bullish_setup",
+    "confidence": 75.90818566540618,
+    "reasons": [
+      "Reason 84",
+      "Reason 85"
+    ],
+    "entry_signal": true,
+    "entry_strength": 73.58833755259248,
+    "entry_reasons": [
+      "Entry reason 84"
+    ],
+    "exit_signal": true,
+    "exit_strength": 44.09074621518849,
+    "exit_reasons": [
+      "Exit reason 84"
+    ],
+    "position_size": 0.014438064215959319,
+    "stop_loss": 92.68907420249123,
+    "risk_reward": 2.5704864056789596,
+    "target_price": 108.07565241344712,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 0.8960409374390673,
+      "rsi": 65.16035547075114,
+      "stoch_rsi": 42.198091835369226
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.72048218727828,
+        100.88587691289948
+      ]
+    }
+  },
+  {
+    "symbol": "KDP",
+    "timestamp": "2025-03-24T13:49:25.239715",
+    "setup": "neutral_setup",
+    "confidence": 75.50766071494172,
+    "reasons": [
+      "Reason 56",
+      "Reason 57"
+    ],
+    "entry_signal": true,
+    "entry_strength": 67.91474346518191,
+    "entry_reasons": [
+      "Entry reason 56"
+    ],
+    "exit_signal": false,
+    "exit_strength": 41.002912394600614,
+    "exit_reasons": [
+      "Exit reason 56"
+    ],
+    "position_size": 0.030113264677790255,
+    "stop_loss": 93.79779598698147,
+    "risk_reward": 1.5477476180221625,
+    "target_price": 105.29677659797869,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.21682219898226,
+      "rsi": 49.15836772376956,
+      "stoch_rsi": 74.26716981504377
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "ROST",
+    "timestamp": "2025-03-24T13:49:42.314126",
+    "setup": "bullish_setup",
+    "confidence": 75.06013625328495,
+    "reasons": [
+      "Reason 90",
+      "Reason 91"
+    ],
+    "entry_signal": false,
+    "entry_strength": 85.10511854290176,
+    "entry_reasons": [
+      "Entry reason 90"
+    ],
+    "exit_signal": true,
+    "exit_strength": 50.03307836423083,
+    "exit_reasons": [
+      "Exit reason 90"
+    ],
+    "position_size": 0.01871774415568472,
+    "stop_loss": 94.68395101014681,
+    "risk_reward": 1.7701960652905064,
+    "target_price": 108.00426221705833,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.5995434379522362,
+      "rsi": 45.61918209434657,
+      "stoch_rsi": 60.05223626111949
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        101.50129439897762,
+        103.55628292210841,
+        96.10904192540251
+      ]
+    }
+  },
+  {
+    "symbol": "GOOG",
+    "timestamp": "2025-03-24T13:49:21.219232",
+    "setup": "neutral_setup",
+    "confidence": 73.80110577290799,
+    "reasons": [
+      "Reason 48",
+      "Reason 49"
+    ],
+    "entry_signal": false,
+    "entry_strength": 57.035384262369305,
+    "entry_reasons": [
+      "Entry reason 48"
+    ],
+    "exit_signal": false,
+    "exit_strength": 71.478262289268,
+    "exit_reasons": [
+      "Exit reason 48"
+    ],
+    "position_size": 0.04440574468337207,
+    "stop_loss": 93.74695986640073,
+    "risk_reward": 1.704424937630961,
+    "target_price": 106.40607552590335,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "negative",
+      "momentum": "strong",
+      "pcr": 1.0349987894731676,
+      "rsi": 35.23404728702253,
+      "stoch_rsi": 55.53474084174192
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        100.58671495316433,
+        101.79064013715556
+      ]
+    }
+  },
+  {
+    "symbol": "DDOG",
+    "timestamp": "2025-03-24T13:49:16.191420",
+    "setup": "bullish_setup",
+    "confidence": 73.34993423789363,
+    "reasons": [
+      "Reason 38",
+      "Reason 39"
+    ],
+    "entry_signal": true,
+    "entry_strength": 58.77350796828625,
+    "entry_reasons": [
+      "Entry reason 38"
+    ],
+    "exit_signal": false,
+    "exit_strength": 56.809510947323616,
+    "exit_reasons": [
+      "Exit reason 38"
+    ],
+    "position_size": 0.0475736536117563,
+    "stop_loss": 92.94649358732428,
+    "risk_reward": 2.046930574562648,
+    "target_price": 115.50187961731724,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "negative",
+      "momentum": "neutral",
+      "pcr": 1.1301553343839936,
+      "rsi": 34.81077798579512,
+      "stoch_rsi": 43.50894500746033
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.53633858870246,
+        100.48295804167789
+      ]
+    }
+  },
+  {
+    "symbol": "KLAC",
+    "timestamp": "2025-03-24T13:49:26.244423",
+    "setup": "bearish_setup",
+    "confidence": 72.5705331306435,
+    "reasons": [
+      "Reason 58",
+      "Reason 59"
+    ],
+    "entry_signal": true,
+    "entry_strength": 75.88503715246569,
+    "entry_reasons": [
+      "Entry reason 58"
+    ],
+    "exit_signal": false,
+    "exit_strength": 67.09100905747084,
+    "exit_reasons": [
+      "Exit reason 58"
+    ],
+    "position_size": 0.013100011316894932,
+    "stop_loss": 91.94943306068508,
+    "risk_reward": 1.7159468505985274,
+    "target_price": 119.83912171881579,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "weak",
+      "pcr": 0.8947194533801731,
+      "rsi": 37.41075538109414,
+      "stoch_rsi": 52.77966176487871
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.88071279254395
+      ]
+    }
+  },
+  {
+    "symbol": "FAST",
+    "timestamp": "2025-03-24T13:49:18.704685",
+    "setup": "neutral_setup",
+    "confidence": 70.56883354740323,
+    "reasons": [
+      "Reason 43",
+      "Reason 44"
+    ],
+    "entry_signal": true,
+    "entry_strength": 51.42768351594751,
+    "entry_reasons": [
+      "Entry reason 43"
+    ],
+    "exit_signal": true,
+    "exit_strength": 63.144812465191634,
+    "exit_reasons": [
+      "Exit reason 43"
+    ],
+    "position_size": 0.03786684730433164,
+    "stop_loss": 94.44169542429948,
+    "risk_reward": 2.3851410809931926,
+    "target_price": 110.86743937823604,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 0.9719388243878578,
+      "rsi": 61.26335462572659,
+      "stoch_rsi": 50.03933283508232
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.68827601181667
+      ]
+    }
+  },
+  {
+    "symbol": "CSX",
+    "timestamp": "2025-03-24T13:49:14.182826",
+    "setup": "bullish_setup",
+    "confidence": 70.54465578719284,
+    "reasons": [
+      "Reason 34",
+      "Reason 35"
+    ],
+    "entry_signal": false,
+    "entry_strength": 50.67442540226344,
+    "entry_reasons": [
+      "Entry reason 34"
+    ],
+    "exit_signal": false,
+    "exit_strength": 44.38574842203069,
+    "exit_reasons": [
+      "Exit reason 34"
+    ],
+    "position_size": 0.019270108516308095,
+    "stop_loss": 90.95897483404521,
+    "risk_reward": 2.0073080672137698,
+    "target_price": 110.00560720589954,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 0.5236074631213946,
+      "rsi": 69.51728010245083,
+      "stoch_rsi": 55.59096213238149
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.27042767743416
+      ]
+    }
+  },
+  {
+    "symbol": "ANSS",
+    "timestamp": "2025-03-24T13:49:03.139906",
+    "setup": "neutral_setup",
+    "confidence": 69.92627946081488,
+    "reasons": [
+      "Reason 12",
+      "Reason 13"
+    ],
+    "entry_signal": false,
+    "entry_strength": 89.19319695371092,
+    "entry_reasons": [
+      "Entry reason 12"
+    ],
+    "exit_signal": true,
+    "exit_strength": 51.19248038376764,
+    "exit_reasons": [
+      "Exit reason 12"
+    ],
+    "position_size": 0.03006455074676702,
+    "stop_loss": 90.41484462677225,
+    "risk_reward": 2.856672954566281,
+    "target_price": 116.57974303427014,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 1.4952196578222563,
+      "rsi": 32.10838499733778,
+      "stoch_rsi": 30.460122024145676
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.59680102961977
+      ]
+    }
+  },
+  {
+    "symbol": "AMGN",
+    "timestamp": "2025-03-24T13:49:02.133707",
+    "setup": "bearish_setup",
+    "confidence": 69.53078377071833,
+    "reasons": [
+      "Reason 10",
+      "Reason 11"
+    ],
+    "entry_signal": true,
+    "entry_strength": 64.1686276143969,
+    "entry_reasons": [
+      "Entry reason 10"
+    ],
+    "exit_signal": false,
+    "exit_strength": 55.57414025752305,
+    "exit_reasons": [
+      "Exit reason 10"
+    ],
+    "position_size": 0.014960750714865188,
+    "stop_loss": 93.55611901525289,
+    "risk_reward": 1.9166927738228197,
+    "target_price": 106.27082536450361,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 1.1796686512781394,
+      "rsi": 32.288573512202476,
+      "stoch_rsi": 29.86713178186614
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        101.14827461590289
+      ]
+    }
+  },
+  {
+    "symbol": "MSTR",
+    "timestamp": "2025-03-24T13:49:33.276156",
+    "setup": "bullish_setup",
+    "confidence": 69.04783140443755,
+    "reasons": [
+      "Reason 72",
+      "Reason 73"
+    ],
+    "entry_signal": false,
+    "entry_strength": 68.49589444991855,
+    "entry_reasons": [
+      "Entry reason 72"
+    ],
+    "exit_signal": false,
+    "exit_strength": 63.81918571594181,
+    "exit_reasons": [
+      "Exit reason 72"
+    ],
+    "position_size": 0.04248045321186143,
+    "stop_loss": 90.8419851074698,
+    "risk_reward": 1.579164485878474,
+    "target_price": 119.04665529986315,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 0.8291472635803122,
+      "rsi": 39.915333457873885,
+      "stoch_rsi": 61.857399299885884
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "EXC",
+    "timestamp": "2025-03-24T13:49:17.698967",
+    "setup": "neutral_setup",
+    "confidence": 68.48669012165173,
+    "reasons": [
+      "Reason 41",
+      "Reason 42"
+    ],
+    "entry_signal": false,
+    "entry_strength": 82.99828621180984,
+    "entry_reasons": [
+      "Entry reason 41"
+    ],
+    "exit_signal": false,
+    "exit_strength": 68.6770362248337,
+    "exit_reasons": [
+      "Exit reason 41"
+    ],
+    "position_size": 0.01753851893522368,
+    "stop_loss": 90.74643917386355,
+    "risk_reward": 2.9136917073212634,
+    "target_price": 106.99188329120625,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 0.5809715464710571,
+      "rsi": 53.14089077057192,
+      "stoch_rsi": 31.611979399035587
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.68039347539914,
+        100.58033750193898,
+        97.35265461534829
+      ]
+    }
+  },
+  {
+    "symbol": "DXCM",
+    "timestamp": "2025-03-24T13:49:16.693068",
+    "setup": "bearish_setup",
+    "confidence": 68.36882553143874,
+    "reasons": [
+      "Reason 39",
+      "Reason 40"
+    ],
+    "entry_signal": true,
+    "entry_strength": 58.77517191190037,
+    "entry_reasons": [
+      "Entry reason 39"
+    ],
+    "exit_signal": false,
+    "exit_strength": 58.47981212057792,
+    "exit_reasons": [
+      "Exit reason 39"
+    ],
+    "position_size": 0.030325036152461265,
+    "stop_loss": 91.29477672512586,
+    "risk_reward": 2.8749919625421345,
+    "target_price": 116.07326024500543,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "negative",
+      "momentum": "strong",
+      "pcr": 1.187544278748947,
+      "rsi": 52.60580114093081,
+      "stoch_rsi": 73.29955056498505
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        100.24077536897484,
+        103.75121219699655
+      ]
+    }
+  },
+  {
+    "symbol": "TTD",
+    "timestamp": "2025-03-24T13:49:45.829055",
+    "setup": "neutral_setup",
+    "confidence": 67.60470682968095,
+    "reasons": [
+      "Reason 97",
+      "Reason 98"
+    ],
+    "entry_signal": true,
+    "entry_strength": 85.4196453078415,
+    "entry_reasons": [
+      "Entry reason 97"
+    ],
+    "exit_signal": false,
+    "exit_strength": 55.202522766004186,
+    "exit_reasons": [
+      "Exit reason 97"
+    ],
+    "position_size": 0.03366067058764725,
+    "stop_loss": 90.14818611232519,
+    "risk_reward": 2.8183872702022787,
+    "target_price": 108.2223682627315,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "weak",
+      "pcr": 0.8164559073607239,
+      "rsi": 45.63828683031636,
+      "stoch_rsi": 50.59576136757801
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        95.55365461903156
+      ]
+    }
+  },
+  {
+    "symbol": "ROP",
+    "timestamp": "2025-03-24T13:49:41.813097",
+    "setup": "bearish_setup",
+    "confidence": 67.09589925165764,
+    "reasons": [
+      "Reason 89",
+      "Reason 90"
+    ],
+    "entry_signal": true,
+    "entry_strength": 66.95890152365452,
+    "entry_reasons": [
+      "Entry reason 89"
+    ],
+    "exit_signal": false,
+    "exit_strength": 54.369588304110174,
+    "exit_reasons": [
+      "Exit reason 89"
+    ],
+    "position_size": 0.031070207041403702,
+    "stop_loss": 90.70427754161547,
+    "risk_reward": 2.0216786838345016,
+    "target_price": 118.12900358494811,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "weak",
+      "pcr": 0.74232389115551,
+      "rsi": 43.0038853690786,
+      "stoch_rsi": 45.595925338269446
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.27300006887737,
+        101.42827823984085
+      ]
+    }
+  },
+  {
+    "symbol": "CDNS",
+    "timestamp": "2025-03-24T13:49:09.161976",
+    "setup": "bullish_setup",
+    "confidence": 66.45321803600741,
+    "reasons": [
+      "Reason 24",
+      "Reason 25"
+    ],
+    "entry_signal": false,
+    "entry_strength": 66.22512516140296,
+    "entry_reasons": [
+      "Entry reason 24"
+    ],
+    "exit_signal": false,
+    "exit_strength": 74.03844768597784,
+    "exit_reasons": [
+      "Exit reason 24"
+    ],
+    "position_size": 0.0178147163697552,
+    "stop_loss": 91.02079084122647,
+    "risk_reward": 2.198854841365121,
+    "target_price": 105.32481999619314,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.1658880591079068,
+      "rsi": 67.43374222783173,
+      "stoch_rsi": 56.049034717860756
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.11317474933615,
+        95.98817434106824
+      ]
+    }
+  },
+  {
+    "symbol": "FANG",
+    "timestamp": "2025-03-24T13:49:18.201043",
+    "setup": "bearish_setup",
+    "confidence": 66.25023667369052,
+    "reasons": [
+      "Reason 42",
+      "Reason 43"
+    ],
+    "entry_signal": true,
+    "entry_strength": 67.58175306778503,
+    "entry_reasons": [
+      "Entry reason 42"
+    ],
+    "exit_signal": false,
+    "exit_strength": 50.739384891861135,
+    "exit_reasons": [
+      "Exit reason 42"
+    ],
+    "position_size": 0.01111379020764819,
+    "stop_loss": 94.00884917411386,
+    "risk_reward": 2.162111702320458,
+    "target_price": 115.90609975052863,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 1.1684260595481,
+      "rsi": 59.05413808294751,
+      "stoch_rsi": 39.71251386002178
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        97.33341724252267,
+        104.11180061620645,
+        96.92107482487654
+      ]
+    }
+  },
+  {
+    "symbol": "REGN",
+    "timestamp": "2025-03-24T13:49:41.311012",
+    "setup": "neutral_setup",
+    "confidence": 66.0078350296238,
+    "reasons": [
+      "Reason 88",
+      "Reason 89"
+    ],
+    "entry_signal": true,
+    "entry_strength": 85.82944459201893,
+    "entry_reasons": [
+      "Entry reason 88"
+    ],
+    "exit_signal": false,
+    "exit_strength": 63.67168437578225,
+    "exit_reasons": [
+      "Exit reason 88"
+    ],
+    "position_size": 0.012245145675522692,
+    "stop_loss": 93.16016621019476,
+    "risk_reward": 2.8925626757510194,
+    "target_price": 111.480535068112,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.3669196816240896,
+      "rsi": 68.55613365539068,
+      "stoch_rsi": 50.683248747078736
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        101.40147862419659,
+        103.38351246134373,
+        97.70849528329141
+      ]
+    }
+  },
+  {
+    "symbol": "FTNT",
+    "timestamp": "2025-03-24T13:49:19.207519",
+    "setup": "neutral_setup",
+    "confidence": 64.9002160906017,
+    "reasons": [
+      "Reason 44",
+      "Reason 45"
+    ],
+    "entry_signal": true,
+    "entry_strength": 82.16879754906758,
+    "entry_reasons": [
+      "Entry reason 44"
+    ],
+    "exit_signal": false,
+    "exit_strength": 72.73701886866598,
+    "exit_reasons": [
+      "Exit reason 44"
+    ],
+    "position_size": 0.04064428882807257,
+    "stop_loss": 90.83033690785902,
+    "risk_reward": 2.4822264054432646,
+    "target_price": 113.1527132447211,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.1859337718134872,
+      "rsi": 64.93218259568931,
+      "stoch_rsi": 23.059615599134005
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        99.12839681573122,
+        100.32220262088117
+      ]
+    }
+  },
+  {
+    "symbol": "PLTR",
+    "timestamp": "2025-03-24T13:49:39.804448",
+    "setup": "neutral_setup",
+    "confidence": 64.02852448566591,
+    "reasons": [
+      "Reason 85",
+      "Reason 86"
+    ],
+    "entry_signal": true,
+    "entry_strength": 75.88886219175016,
+    "entry_reasons": [
+      "Entry reason 85"
+    ],
+    "exit_signal": true,
+    "exit_strength": 66.61691910384332,
+    "exit_reasons": [
+      "Exit reason 85"
+    ],
+    "position_size": 0.044787714910370396,
+    "stop_loss": 91.77445691812716,
+    "risk_reward": 1.874750979433696,
+    "target_price": 111.0357775256751,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "neutral",
+      "pcr": 0.7716945918112633,
+      "rsi": 52.70842530335656,
+      "stoch_rsi": 64.45334504066042
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.92420616042013,
+        95.40797254037221,
+        95.88511941057781
+      ]
+    }
+  },
+  {
+    "symbol": "IDXX",
+    "timestamp": "2025-03-24T13:49:22.727128",
+    "setup": "bullish_setup",
+    "confidence": 63.16819254521999,
+    "reasons": [
+      "Reason 51",
+      "Reason 52"
+    ],
+    "entry_signal": true,
+    "entry_strength": 61.20531403880615,
+    "entry_reasons": [
+      "Entry reason 51"
+    ],
+    "exit_signal": false,
+    "exit_strength": 59.0460656881548,
+    "exit_reasons": [
+      "Exit reason 51"
+    ],
+    "position_size": 0.03209654165916513,
+    "stop_loss": 92.55342634493122,
+    "risk_reward": 2.407423676485725,
+    "target_price": 108.2446665291022,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 1.0887615232041647,
+      "rsi": 52.931906198648534,
+      "stoch_rsi": 67.48803926986001
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.89216750026478,
+        95.16571600613025,
+        97.53284503450128
+      ]
+    }
+  },
+  {
+    "symbol": "JD",
+    "timestamp": "2025-03-24T13:49:24.736836",
+    "setup": "bullish_setup",
+    "confidence": 62.39801206432846,
+    "reasons": [
+      "Reason 55",
+      "Reason 56"
+    ],
+    "entry_signal": true,
+    "entry_strength": 84.23229557598685,
+    "entry_reasons": [
+      "Entry reason 55"
+    ],
+    "exit_signal": false,
+    "exit_strength": 59.12174859363304,
+    "exit_reasons": [
+      "Exit reason 55"
+    ],
+    "position_size": 0.03788528711802359,
+    "stop_loss": 90.7212131531103,
+    "risk_reward": 2.4783842647079126,
+    "target_price": 106.56065929074347,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 1.0165320078346598,
+      "rsi": 46.620383564382735,
+      "stoch_rsi": 71.82888999063596
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  },
+  {
+    "symbol": "GOOGL",
+    "timestamp": "2025-03-24T13:49:21.721955",
+    "setup": "bearish_setup",
+    "confidence": 62.2895679784783,
+    "reasons": [
+      "Reason 49",
+      "Reason 50"
+    ],
+    "entry_signal": true,
+    "entry_strength": 85.26013277292975,
+    "entry_reasons": [
+      "Entry reason 49"
+    ],
+    "exit_signal": false,
+    "exit_strength": 45.20171688098208,
+    "exit_reasons": [
+      "Exit reason 49"
+    ],
+    "position_size": 0.029749841125048818,
+    "stop_loss": 91.28597128364201,
+    "risk_reward": 2.8968824419634944,
+    "target_price": 109.15077481931304,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "positive",
+      "momentum": "strong",
+      "pcr": 1.0614065940344868,
+      "rsi": 63.37849502542039,
+      "stoch_rsi": 74.74556243628976
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        102.09492819915955
+      ]
+    }
+  },
+  {
+    "symbol": "DASH",
+    "timestamp": "2025-03-24T13:49:15.688762",
+    "setup": "bullish_setup",
+    "confidence": 62.00701774015058,
+    "reasons": [
+      "Reason 37",
+      "Reason 38"
+    ],
+    "entry_signal": true,
+    "entry_strength": 84.66103367044084,
+    "entry_reasons": [
+      "Entry reason 37"
+    ],
+    "exit_signal": false,
+    "exit_strength": 50.82428257445176,
+    "exit_reasons": [
+      "Exit reason 37"
+    ],
+    "position_size": 0.037856653001756134,
+    "stop_loss": 93.49316782743811,
+    "risk_reward": 2.9977960648770887,
+    "target_price": 105.32066753795816,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bullish",
+      "sentiment": "neutral",
+      "momentum": "neutral",
+      "pcr": 1.3170390780557377,
+      "rsi": 40.511865906734954,
+      "stoch_rsi": 40.01582934196966
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        98.94235058197205
+      ]
+    }
+  },
+  {
+    "symbol": "CRWD",
+    "timestamp": "2025-03-24T13:49:12.676910",
+    "setup": "neutral_setup",
+    "confidence": 61.5757723263915,
+    "reasons": [
+      "Reason 31",
+      "Reason 32"
+    ],
+    "entry_signal": true,
+    "entry_strength": 59.66941501002755,
+    "entry_reasons": [
+      "Entry reason 31"
+    ],
+    "exit_signal": false,
+    "exit_strength": 61.2255431934061,
+    "exit_reasons": [
+      "Exit reason 31"
+    ],
+    "position_size": 0.024043278792219777,
+    "stop_loss": 93.9226591198504,
+    "risk_reward": 2.3588079018726877,
+    "target_price": 109.38666594957563,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "positive",
+      "momentum": "weak",
+      "pcr": 1.1642168855754766,
+      "rsi": 53.59914488504522,
+      "stoch_rsi": 66.7497883383318
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        96.00632257319702,
+        97.09650614667555
+      ]
+    }
+  },
+  {
+    "symbol": "CEG",
+    "timestamp": "2025-03-24T13:49:10.166687",
+    "setup": "bearish_setup",
+    "confidence": 61.24655419137917,
+    "reasons": [
+      "Reason 26",
+      "Reason 27"
+    ],
+    "entry_signal": false,
+    "entry_strength": 81.3911953740695,
+    "entry_reasons": [
+      "Entry reason 26"
+    ],
+    "exit_signal": false,
+    "exit_strength": 40.45197978872017,
+    "exit_reasons": [
+      "Exit reason 26"
+    ],
+    "position_size": 0.017576293577170027,
+    "stop_loss": 94.8434426127229,
+    "risk_reward": 2.3784673584779554,
+    "target_price": 108.98961866880153,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "bearish",
+      "sentiment": "neutral",
+      "momentum": "strong",
+      "pcr": 0.6342300124769676,
+      "rsi": 67.87996571389064,
+      "stoch_rsi": 67.41826633850707
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": [
+        103.99068645655214,
+        104.85486436938531
+      ]
+    }
+  },
+  {
+    "symbol": "GILD",
+    "timestamp": "2025-03-24T13:49:20.716035",
+    "setup": "neutral_setup",
+    "confidence": 60.75574153420057,
+    "reasons": [
+      "Reason 47",
+      "Reason 48"
+    ],
+    "entry_signal": false,
+    "entry_strength": 89.53428484556143,
+    "entry_reasons": [
+      "Entry reason 47"
+    ],
+    "exit_signal": false,
+    "exit_strength": 51.57077083313936,
+    "exit_reasons": [
+      "Exit reason 47"
+    ],
+    "position_size": 0.04800060642891309,
+    "stop_loss": 93.62157282936946,
+    "risk_reward": 2.2536917195854484,
+    "target_price": 108.03689167445513,
+    "current_price": 100.0,
+    "market_context": {
+      "trend": "neutral",
+      "sentiment": "negative",
+      "momentum": "weak",
+      "pcr": 0.6449079340226808,
+      "rsi": 65.63632951811398,
+      "stoch_rsi": 24.533397285255596
+    },
+    "key_levels": {
+      "support": [
+        90.0,
+        85.0,
+        80.0
+      ],
+      "resistance": [
+        110.0,
+        120.0,
+        130.0
+      ],
+      "max_pain": 100.0,
+      "high_gamma": []
+    }
+  }
+]

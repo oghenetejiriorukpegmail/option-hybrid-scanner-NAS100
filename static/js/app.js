@@ -8,6 +8,7 @@ let emaChart = null;
 let levelsChart = null;
 let riskRewardChart = null;
 let scanResults = [];
+let scanInProgress = false;
 
 // DOM elements
 const navLinks = document.querySelectorAll('.nav-link');
@@ -17,6 +18,8 @@ const scannerForm = document.getElementById('scannerForm');
 const analyzeButton = document.getElementById('analyzeButton');
 const analysisSymbol = document.getElementById('analysisSymbol');
 const analysisResults = document.getElementById('analysisResults');
+const resultsTable = document.getElementById('resultsTable');
+const progressBarElement = document.querySelector('.progress-bar');
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,6 +77,14 @@ function setupEventListeners() {
     // Scanner form
     scannerForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        // Navigate to dashboard immediately
+        navLinks.forEach(l => l.classList.remove('active'));
+        document.querySelector('a[href="#dashboard"]').classList.add('active');
+        sections.forEach(section => section.classList.add('d-none'));
+        document.getElementById('dashboard').classList.remove('d-none');
+        
+        // Run the scan
         runScan();
     });
     
@@ -101,7 +112,7 @@ function setupEventListeners() {
  */
 function loadResults() {
     // Show loading state
-    document.getElementById('resultsTable').innerHTML = '<tr><td colspan="9" class="text-center">Loading results...</td></tr>';
+    resultsTable.innerHTML = '<tr><td colspan="9" class="text-center">Loading results...</td></tr>';
     
     // Fetch results from API
     fetch('/api/results')
@@ -111,12 +122,12 @@ function loadResults() {
                 scanResults = data.results;
                 updateDashboard();
             } else {
-                document.getElementById('resultsTable').innerHTML = '<tr><td colspan="9" class="text-center">No results available</td></tr>';
+                resultsTable.innerHTML = '<tr><td colspan="9" class="text-center">No results available</td></tr>';
             }
         })
         .catch(error => {
             console.error('Error loading results:', error);
-            document.getElementById('resultsTable').innerHTML = '<tr><td colspan="9" class="text-center">Error loading results</td></tr>';
+            resultsTable.innerHTML = '<tr><td colspan="9" class="text-center">Error loading results</td></tr>';
         });
 }
 
@@ -282,8 +293,22 @@ function updateResultsTable() {
  * Run scanner with custom filters
  */
 function runScan() {
+    // Prevent multiple scans from running simultaneously
+    if (scanInProgress) {
+        alert('A scan is already in progress. Please wait for it to complete.');
+        return;
+    }
+    
+    scanInProgress = true;
+    
     // Show loading state
-    document.getElementById('resultsTable').innerHTML = '<tr><td colspan="9" class="text-center">Running scan...</td></tr>';
+    resultsTable.innerHTML = '<tr><td colspan="9" class="text-center">Running scan...</td></tr>';
+
+    // Reset and show progress bar
+    progressBarElement.style.width = '0%';
+    progressBarElement.setAttribute('aria-valuenow', '0');
+    progressBarElement.innerHTML = '<span class="progress-text">0%</span>';
+    progressBarElement.parentElement.classList.remove('d-none');
     
     // Get filter values
     const trendBullish = document.getElementById('trendBullish').checked;
@@ -320,40 +345,99 @@ function runScan() {
     if (symbol) {
         filters.symbols = [symbol];
     }
-    
-    // Send request to API
-    fetch('/api/scan', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ filters })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            scanResults = data.results;
-            
-            // Navigate to dashboard
-            navLinks.forEach(l => l.classList.remove('active'));
-            document.querySelector('a[href="#dashboard"]').classList.add('active');
-            
-            // Hide all sections
-            sections.forEach(section => section.classList.add('d-none'));
-            
-            // Show dashboard section
-            document.getElementById('dashboard').classList.remove('d-none');
-            
-            // Update dashboard
-            updateDashboard();
-        } else {
-            alert(`Error running scan: ${data.error}`);
+
+    // Initialize progress bar
+    const progressBar = progressBarElement;
+    progressBar.style.width = '0%';
+    progressBar.classList.remove('bg-danger', 'bg-success');
+    progressBar.setAttribute('aria-valuenow', 0);
+    progressBar.querySelector('.progress-text').textContent = 'Initializing scan...';
+    progressBar.parentElement.classList.remove('d-none');
+
+    let eventSource = null;
+    let scanTimeout = null;
+
+    const handleScanError = (error) => {
+        console.error('Scan error:', error);
+        progressBar.classList.add('bg-danger');
+        progressBar.querySelector('.progress-text').textContent = `Error: ${error}`;
+        scanInProgress = false;
+        if (eventSource) {
+            eventSource.close();
         }
-    })
-    .catch(error => {
-        console.error('Error running scan:', error);
-        alert('Error running scan. Please try again.');
-    });
+        if (scanTimeout) {
+            clearTimeout(scanTimeout);
+        }
+    };
+
+    const handleScanComplete = (results) => {
+        scanResults = results;
+        scanInProgress = false;
+        progressBar.classList.add('bg-success');
+        progressBar.style.width = '100%';
+        progressBar.setAttribute('aria-valuenow', 100);
+        progressBar.querySelector('.progress-text').textContent = 'Scan Complete!';
+
+        // Navigate to dashboard immediately
+        navLinks.forEach(l => l.classList.remove('active'));
+        document.querySelector('a[href="#dashboard"]').classList.add('active');
+        sections.forEach(section => section.classList.add('d-none'));
+        document.getElementById('dashboard').classList.remove('d-none');
+        updateDashboard();
+    };
+
+    try {
+        // Set scan timeout
+        scanTimeout = setTimeout(() => {
+            handleScanError('Scan timed out after 30 seconds');
+        }, 30000);
+
+        // Create EventSource for progress updates
+        const url = new URL('/api/scan', window.location.origin);
+        url.searchParams.append('filters', JSON.stringify(filters));
+        eventSource = new EventSource(url.toString());
+
+        eventSource.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+
+                // Clear timeout on any message
+                if (scanTimeout) {
+                    clearTimeout(scanTimeout);
+                }
+
+                // Handle progress updates
+                if (data.progress !== undefined) {
+                    const progress = Math.min(100, Math.max(0, data.progress));
+                    progressBar.style.width = `${progress}%`;
+                    progressBar.setAttribute('aria-valuenow', progress);
+                    progressBar.querySelector('.progress-text').textContent =
+                        `${progress}% Complete`;
+                }
+
+                // Handle errors
+                if (data.error) {
+                    handleScanError(data.error);
+                    return;
+                }
+
+                // Handle completion
+                if (data.success && data.results) {
+                    eventSource.close();
+                    handleScanComplete(data.results);
+                }
+            } catch (error) {
+                handleScanError(`Failed to parse server message: ${error.message}`);
+            }
+        };
+
+        eventSource.onerror = (error) => {
+            handleScanError('Connection to scan server failed');
+        };
+
+    } catch (error) {
+        handleScanError(`Failed to start scan: ${error.message}`);
+    }
 }
 
 /**
@@ -415,11 +499,21 @@ function displayAnalysis(result) {
     
     const highGammaStrikes = document.getElementById('highGammaStrikes');
     highGammaStrikes.innerHTML = '';
-    result.key_levels.high_gamma.forEach(strike => {
+    
+    // Check if high_gamma exists and is an array
+    if (result.key_levels.high_gamma && Array.isArray(result.key_levels.high_gamma)) {
+        result.key_levels.high_gamma.forEach(strike => {
+            const li = document.createElement('li');
+            li.textContent = `$${strike.toFixed(2)}`;
+            highGammaStrikes.appendChild(li);
+        });
+    } else {
+        // Add a placeholder if no high gamma strikes
         const li = document.createElement('li');
-        li.textContent = `$${strike.toFixed(2)}`;
+        li.textContent = 'No high gamma strikes found';
+        li.className = 'text-muted';
         highGammaStrikes.appendChild(li);
-    });
+    }
     
     // Trade Setup
     document.getElementById('setupValue').textContent = result.setup;
@@ -498,52 +592,46 @@ function createEmaChart(result) {
                 {
                     label: '10 EMA',
                     data: [result.market_context.ema10],
-                    borderColor: '#28a745',
-                    backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                    borderWidth: 2,
-                    pointRadius: 0
+                    borderColor: '#007bff',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#007bff'
                 },
                 {
                     label: '20 EMA',
                     data: [result.market_context.ema20],
-                    borderColor: '#007bff',
-                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
-                    borderWidth: 2,
-                    pointRadius: 0
+                    borderColor: '#6c757d',
+                    backgroundColor: 'rgba(108, 117, 125, 0.1)',
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#6c757d'
                 },
                 {
                     label: '50 EMA',
                     data: [result.market_context.ema50],
                     borderColor: '#dc3545',
                     backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                    borderWidth: 2,
-                    pointRadius: 0
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#dc3545'
                 }
             ]
         },
         options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Price and EMAs'
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false
-                }
-            },
             scales: {
-                y: {
-                    beginAtZero: false
-                }
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
             }
         }
     });
 }
 
 /**
- * Create levels chart
+ * Create Levels chart
  */
 function createLevelsChart(result) {
     // Destroy existing chart if it exists
@@ -552,75 +640,58 @@ function createLevelsChart(result) {
     }
     
     // Prepare data
-    const labels = [];
-    const data = [];
-    const backgroundColor = [];
-    const borderColor = [];
+    const labels = ['Current Price'];
+    const data = [result.current_price];
+    const supportLevels = result.key_levels.support.map(level => level.toFixed(2));
+    const resistanceLevels = result.key_levels.resistance.map(level => level.toFixed(2));
     
-    // Add support levels
-    result.key_levels.support.forEach(level => {
-        labels.push(`Support $${level.toFixed(2)}`);
-        data.push(level);
-        backgroundColor.push('rgba(40, 167, 69, 0.2)');
-        borderColor.push('#28a745');
-    });
-    
-    // Add current price
-    labels.push(`Current $${result.current_price.toFixed(2)}`);
-    data.push(result.current_price);
-    backgroundColor.push('rgba(0, 0, 0, 0.2)');
-    borderColor.push('#000000');
-    
-    // Add max pain
-    if (result.key_levels.max_pain) {
-        labels.push(`Max Pain $${result.key_levels.max_pain.toFixed(2)}`);
-        data.push(result.key_levels.max_pain);
-        backgroundColor.push('rgba(255, 193, 7, 0.2)');
-        borderColor.push('#ffc107');
-    }
-    
-    // Add resistance levels
-    result.key_levels.resistance.forEach(level => {
-        labels.push(`Resistance $${level.toFixed(2)}`);
-        data.push(level);
-        backgroundColor.push('rgba(220, 53, 69, 0.2)');
-        borderColor.push('#dc3545');
-    });
-    
-    // Create new chart
+    // Create chart
     const ctx = document.getElementById('levelsChart').getContext('2d');
     levelsChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
-            datasets: [{
-                label: 'Price Levels',
-                data: data,
-                backgroundColor: backgroundColor,
-                borderColor: borderColor,
-                borderWidth: 1
-            }]
+            datasets: [
+                {
+                    label: 'Price',
+                    data: data,
+                    backgroundColor: '#000000',
+                    borderWidth: 2,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#000000'
+                },
+                {
+                    label: 'Support',
+                    data: supportLevels,
+                    backgroundColor: '#28a745',
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#28a745'
+                },
+                {
+                    label: 'Resistance',
+                    data: resistanceLevels,
+                    backgroundColor: '#dc3545',
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#dc3545'
+                }
+            ]
         },
         options: {
-            indexAxis: 'y',
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Key Price Levels'
-                }
-            },
             scales: {
-                x: {
-                    beginAtZero: false
-                }
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
             }
-        }
+        },
     });
 }
 
 /**
- * Create risk/reward chart
+ * Create Risk Reward chart
  */
 function createRiskRewardChart(result) {
     // Destroy existing chart if it exists
@@ -628,54 +699,32 @@ function createRiskRewardChart(result) {
         riskRewardChart.destroy();
     }
     
-    // Calculate risk and reward percentages
-    const riskPercent = Math.abs(result.stop_loss - result.current_price) / result.current_price * 100;
-    const rewardPercent = Math.abs(result.target_price - result.current_price) / result.current_price * 100;
+    // Prepare data
+    const labels = ['Stop Loss', 'Target Price'];
+    const data = [result.stop_loss, result.target_price];
     
-    // Create new chart
+    // Create chart
     const ctx = document.getElementById('riskRewardChart').getContext('2d');
     riskRewardChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Risk', 'Reward'],
+            labels: labels,
             datasets: [{
-                label: 'Percentage',
-                data: [riskPercent, rewardPercent],
-                backgroundColor: [
-                    'rgba(220, 53, 69, 0.2)',
-                    'rgba(40, 167, 69, 0.2)'
-                ],
-                borderColor: [
-                    '#dc3545',
-                    '#28a745'
-                ],
-                borderWidth: 1
+                label: 'Price',
+                data: data,
+                backgroundColor: ['#dc3545', '#28a745'],
+                borderWidth: 1,
+                pointRadius: 3,
+                pointBackgroundColor: ['#dc3545', '#28a745']
             }]
         },
         options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Risk/Reward Analysis'
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            return `${context.raw.toFixed(2)}%`;
-                        }
-                    }
-                }
-            },
             scales: {
-                y: {
-                    beginAtZero: true,
+                yAxes: [{
                     ticks: {
-                        callback: function(value) {
-                            return value + '%';
-                        }
+                        beginAtZero: false
                     }
-                }
+                }]
             }
         }
     });

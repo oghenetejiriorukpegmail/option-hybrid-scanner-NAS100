@@ -1,201 +1,185 @@
-"""
-Web Application Module
-
-This module provides a web interface for the Options-Technical Hybrid Scanner.
-"""
-
+import sys
 import os
+import threading
+import time
 import json
-import logging
-from datetime import datetime
-from flask import Flask, render_template, request, jsonify, send_from_directory
-from flask_cors import CORS
+from pathlib import Path
+from flask import Flask, render_template, jsonify, Response, request
 
-from src.modules.market_context import MarketContextAnalyzer
-from src.modules.key_levels import KeyLevelsMapper
-from src.modules.trade_setup import TradeSetupEngine
-from src.modules.confirmation import ConfirmationModule
-from src.modules.risk_management import RiskManager
+# Add the project root directory to Python path
+project_root = str(Path(__file__).resolve().parent.parent.parent)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 from src.modules.scanner import StockScanner
 
-logger = logging.getLogger(__name__)
+class ProgressManager:
+    def __init__(self):
+        self.status = {
+            'progress': 0,
+            'message': 'Initializing...',
+            'is_scanning': False,
+            'current_symbol': None,
+            'errors': [],
+            'results': None
+        }
+        self.lock = threading.Lock()
+
+    def update(self, progress, message, current_symbol=None):
+        with self.lock:
+            self.status['progress'] = min(100, max(0, progress))
+            self.status['message'] = message
+            if current_symbol:
+                self.status['current_symbol'] = current_symbol
+
+    def add_error(self, error):
+        with self.lock:
+            self.status['errors'].append(error)
+
+    def set_results(self, results):
+        with self.lock:
+            self.status['results'] = results
+
+    def get_status(self):
+        with self.lock:
+            return dict(self.status)
+
+    def reset(self):
+        with self.lock:
+            self.status.update({
+                'progress': 0,
+                'message': 'Initializing...',
+                'is_scanning': False,
+                'current_symbol': None,
+                'errors': [],
+                'results': None
+            })
 
 def create_app():
-    """Create and configure the Flask application"""
-    # Create Flask app
-    app = Flask(__name__, 
-                static_folder=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'static'),
-                template_folder=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'templates'))
-    
-    # Enable CORS
-    CORS(app)
-    
-    # Create scanner instance
-    scanner = StockScanner()
-    
+    """Creates and configures the Flask application."""
+    app = Flask(__name__,
+        template_folder=str(Path(__file__).resolve().parent.parent.parent / 'templates'),
+        static_folder=str(Path(__file__).resolve().parent.parent.parent / 'static'))
+
+    progress_manager = ProgressManager()
+    scanner_lock = threading.Lock()
+
+    def progress_callback(data):
+        """Callback function for scanner progress updates"""
+        progress_manager.update(
+            data.get('progress', 0),
+            data.get('message', 'Processing...'),
+            data.get('current_symbol')
+        )
+        if 'error' in data:
+            progress_manager.add_error(data['error'])
+
     @app.route('/')
     def index():
-        """Render the main dashboard page"""
         return render_template('index.html')
-    
-    @app.route('/api/scan', methods=['POST'])
-    def scan():
-        """Run the scanner with custom filters"""
-        try:
-            # Get filter parameters from request
-            filters = request.json.get('filters', {})
-            
-            # Update scanner config with filters
-            scanner.config['filters'].update(filters)
-            
-            # Run the scan
-            results = scanner.scan()
-            
-            return jsonify({
-                'success': True,
-                'count': len(results),
-                'results': results
-            })
-        except Exception as e:
-            logger.error(f"Error running scan: {e}")
-            return jsonify({
-                'success': False,
-                'error': str(e)
-            }), 500
-    
-    @app.route('/api/analyze/<symbol>', methods=['GET'])
-    def analyze(symbol):
-        """Analyze a specific symbol"""
-        try:
-            # Initialize modules
-            market_context = MarketContextAnalyzer(symbol)
-            key_levels = KeyLevelsMapper(symbol)
-            trade_setup = TradeSetupEngine(symbol)
-            confirmation = ConfirmationModule(symbol)
-            risk_manager = RiskManager(symbol)
-            
-            # Analyze market context
-            context_results = market_context.analyze()
-            if not context_results['success']:
-                return jsonify({
-                    'success': False,
-                    'error': f"Failed to analyze market context for {symbol}"
-                }), 400
-            
-            # Map key levels
-            levels_results = key_levels.map_levels()
-            if not levels_results['success']:
-                return jsonify({
-                    'success': False,
-                    'error': f"Failed to map key levels for {symbol}"
-                }), 400
-            
-            # Determine trade setup
-            setup_results = trade_setup.determine_setup(context_results, levels_results)
-            
-            # Get confirmation signals
-            confirmation_results = confirmation.get_signals(setup_results)
-            
-            # Get risk management recommendations
-            risk_results = risk_manager.get_recommendations(setup_results)
-            
-            # Combine results
-            result = {
-                'symbol': symbol,
-                'timestamp': datetime.now().isoformat(),
-                'setup': setup_results['setup'],
-                'confidence': setup_results['confidence'],
-                'reasons': setup_results['reasons'],
-                'entry_signal': confirmation_results['entry']['signal'],
-                'entry_strength': confirmation_results['entry']['strength'],
-                'entry_reasons': confirmation_results['entry']['reasons'],
-                'exit_signal': confirmation_results['exit']['signal'],
-                'exit_strength': confirmation_results['exit']['strength'],
-                'exit_reasons': confirmation_results['exit']['reasons'],
-                'position_size': risk_results['position_size']['recommended'],
-                'stop_loss': risk_results['stop_loss']['technical'],
-                'risk_reward': risk_results['risk_reward']['ratio'],
-                'target_price': risk_results['risk_reward'].get('target_price', 0),
-                'current_price': levels_results['current_price'],
-                'market_context': {
-                    'trend': context_results['trend'],
-                    'sentiment': context_results['sentiment'],
-                    'momentum': context_results['momentum'],
-                    'pcr': context_results['pcr'],
-                    'rsi': context_results['rsi'],
-                    'stoch_rsi': context_results['stoch_rsi'],
-                    'ema10': context_results['ema10'],
-                    'ema20': context_results['ema20'],
-                    'ema50': context_results['ema50']
-                },
-                'key_levels': {
-                    'support': levels_results['support'],
-                    'resistance': levels_results['resistance'],
-                    'max_pain': levels_results['max_pain'],
-                    'high_gamma': levels_results['high_gamma']
-                }
-            }
-            
-            return jsonify({
-                'success': True,
-                'result': result
-            })
-        except Exception as e:
-            logger.error(f"Error analyzing {symbol}: {e}")
-            return jsonify({
-                'success': False,
-                'error': str(e)
-            }), 500
-    
-    @app.route('/api/results', methods=['GET'])
+
+    @app.route('/api/scan')
+    def start_scan():
+        filters = request.args.get('filters')
+        if filters:
+            try:
+                filters = json.loads(filters)
+            except json.JSONDecodeError:
+                return jsonify({'error': 'Invalid filters format'}), 400
+        else:
+            filters = {}
+
+        def generate_events():
+            try:
+                with scanner_lock:
+                    if progress_manager.status['is_scanning']:
+                        yield f"data: {json.dumps({'error': 'Scan already in progress'})}\n\n"
+                        return
+
+                    progress_manager.reset()
+                    progress_manager.status['is_scanning'] = True
+
+                    # Initialize scanner with progress callback
+                    scanner = StockScanner(config_file='config.json', progress_callback=progress_callback)
+
+                    # Update scanner config with user filters
+                    scanner.config['filters'].update(filters)
+
+                    # Start a background thread to run the scan
+                    def run_scan_thread():
+                        try:
+                            # Run the scan
+                            results = scanner.scan()
+
+                            # Set the results in the progress manager
+                            progress_manager.set_results(results)
+
+                            # Final progress update
+                            progress_manager.update(100, f"Scan complete. Found {len(results)} setups.")
+                        except Exception as e:
+                            progress_manager.add_error(f"Scan failed: {str(e)}")
+                        finally:
+                            progress_manager.status['is_scanning'] = False
+
+                    # Start the scan in a background thread
+                    scan_thread = threading.Thread(target=run_scan_thread)
+                    scan_thread.daemon = True
+                    scan_thread.start()
+
+                    # Send progress updates while scanning
+                    last_progress = -1
+                    last_message = ""
+
+                    # Send initial progress
+                    yield f"data: {json.dumps({'progress': 0, 'message': 'Starting scan...'})}\n\n"
+
+                    # Keep sending updates until scan is complete
+                    while progress_manager.status['is_scanning']:
+                        status = progress_manager.get_status()
+                        current_progress = status['progress']
+                        current_message = status.get('message', '')
+
+                        # Only send update if progress or message has changed
+                        if current_progress != last_progress or current_message != last_message:
+                            yield f"data: {json.dumps({'progress': current_progress, 'message': current_message})}\n\n"
+                            last_progress = current_progress
+                            last_message = current_message
+
+                            # Log progress to console
+                            print(f"Scan progress: {current_progress}% - {current_message}")
+
+                        time.sleep(0.5)
+
+                    # Send final results
+                    status = progress_manager.get_status()
+                    if status['results']:
+                        yield f"data: {json.dumps({'success': True, 'results': status['results']})}\n\n"
+                    else:
+                        yield f"data: {json.dumps({'error': 'Scan completed but no results were found'})}\n\n"
+
+            except Exception as e:
+                yield f"data: {json.dumps({'error': str(e)})}\n\n"
+            finally:
+                progress_manager.status['is_scanning'] = False
+
+        return Response(generate_events(), mimetype="text/event-stream")
+
+    @app.route('/api/results')
     def get_results():
-        """Get the latest scan results"""
+        status = progress_manager.get_status()
+        if status['results']:
+            return jsonify({'success': True, 'results': status['results']})
+        return jsonify({'success': False, 'message': 'No results available'})
+
+    @app.route('/api/analyze/<symbol>')
+    def analyze_symbol(symbol):
         try:
-            # Get results from scanner
-            results = scanner.results
-            
-            # If no results, try to load from file
-            if not results:
-                output_dir = scanner.config['output_dir']
-                if os.path.exists(output_dir):
-                    # Get the latest results file
-                    files = [f for f in os.listdir(output_dir) if f.startswith('scan_results_') and f.endswith('.json')]
-                    if files:
-                        latest_file = max(files)
-                        with open(os.path.join(output_dir, latest_file), 'r') as f:
-                            results = json.load(f)
-            
-            return jsonify({
-                'success': True,
-                'count': len(results),
-                'results': results
-            })
+            scanner = StockScanner(config_file='config.json')
+            result = scanner._analyze_symbol(symbol)
+            if result:
+                return jsonify({'success': True, 'result': result})
+            return jsonify({'success': False, 'error': f'No analysis results for {symbol}'})
         except Exception as e:
-            logger.error(f"Error getting results: {e}")
-            return jsonify({
-                'success': False,
-                'error': str(e)
-            }), 500
-    
-    @app.route('/api/symbols', methods=['GET'])
-    def get_symbols():
-        """Get the list of symbols to scan"""
-        try:
-            return jsonify({
-                'success': True,
-                'count': len(scanner.symbols),
-                'symbols': scanner.symbols
-            })
-        except Exception as e:
-            logger.error(f"Error getting symbols: {e}")
-            return jsonify({
-                'success': False,
-                'error': str(e)
-            }), 500
-    
-    @app.route('/static/<path:path>')
-    def serve_static(path):
-        """Serve static files"""
-        return send_from_directory(app.static_folder, path)
-    
+            return jsonify({'success': False, 'error': str(e)})
+
     return app
